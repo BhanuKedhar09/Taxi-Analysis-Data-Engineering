@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "taxidatapipeline",
+  "private_key_id": "a209e933f10835c35e5bc454e36544bcf47625c8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDhCSdW8vZcAuIS\nXIucWdVTkAZMtkXoTSSZ14j7D7Ilj55++UjE0FgtlIQD80ADuwA6yKWECHtUXnrG\nL969+AqUX09yx1OKa7qW2/zEi9Y+VYoV7yQRWqABljdW/FhcP0h12DnuhbK0c9/9\nct2pTkqpCwPdTgVqhN1Fn9HQh+zS0r84y1nx/7rcDErQcBFQmXtspMDmwHarYen9\ngXcN2UUQzlr6wkOCFMyqvUTNsm+At4GstDLu0UdPnVNyoGPceS8eoy6V1LTjPJk/\n8FBmQYC9jyQPns1Bb/ZEfFGO/OlrqzQoV22Tjl+VnyuDzq5W8HlLgd5iqH0OKfWW\nA2cs+4YzAgMBAAECggEAQYWyyKRRixTj0kjT9aBKdtw2mVtxG2Rqxch1//PgAQPC\nOGJJB9VJ92uIzMWk2/E07ejCGKGHl1czFEWX62QvYGgn79mNv34ChC5leKzmopux\naxWIQO1MLWoZjuBGsgVTCcz9gS+4isY6b8dkNwmuv22PoH45IXyyGLWiF7+b+v4K\nFpVsBaauXFfzRzLE/EZ0Tlw6/URoeUife0/I9nlPjcbUpcRXiG9Qoghg4oOGOrJ0\nsm6xaPfc+FZz8Elk079ekogXjgk4WAgb9HfzylN8o+byvGTRhBcMbxJk+e/7Lx8f\na4lE+pJf/KuBegjgUc8VRD79DMKk10yq8rnOTT3roQKBgQD06RFhTnMAwOORcdH6\nHoVdTKvRSDmvPUijS+lhfy5LTq/o+dguYrOHupkNEOCcteAjj68ECiL9fVoOJm5I\nGekonNbO1n9/X3QxbYbN58Eyy9eRLF1DhCCe0dvh+75jWtiGe0GQM0i/n1LUiw2F\nkT4DeYbVwFG8bOznoCCYh+PWaQKBgQDrObRNOXLA/PFLjzV4y3twMRVwmvdJil1P\njIytVwrYLWnIXcrArFd2IQq3JhMKfeEP3E+JGwZFGKZUQn3dqAzlLvy5LOAxBGFm\nOynxOWtqoqZknLHo7PtnyVyve8fVJn+uXWnJeBtpSswwsHBPnXwO50EuTxyIhpnx\nLaifYWS8OwKBgF6x72JsbtMPwe3u0H2hZ3eXuaeGAafcTkW1iFuGTWQY3LN8RzZI\nO5pzb9I5gF+Xgz68w7MQKE9TNIrcGTAPtLNbUUNQdKPPSKID82eSAIWfg45CVR1R\n7Tr7ccWDDS5lZes5pTQYYDyXYfOEgInwisXVK2linzf39fHpXDEd+d5hAoGAbQhg\nZPNeF8qnZmjJVmarnwOBdqK+QV5bhkYV5ztTkYTrZa7kDo9UMzN5rg99//z9V8a9\nL0ZRj7GvV5tCkH4XDBzNlGASw2XOZ/7AoEoHWnRuQHDJnrhKiH8z8TulE043HPG7\n2WFNA29iWqdOR/ktyhKzie2twjLyJHMPmGEiuoUCgYEA1DkN19Znd7ib/6RoTeCA\nv29h/dB2kF/9o7QeUQYYT06ycq204r/i9Uu2A5NGJ4IqLuclriNOScx3QEkcl08+\nN29p1S2VBlLMHufvy0Vb3S9AeTB608UQm3QxLIW1Ji8p+nmuY4aScyVg+gJs0ukV\nkf/g7PMh0T1KIoztytfaMuo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "taxi-data-engineering-project@taxidatapipeline.iam.gserviceaccount.com",
+  "client_id": "117134104683822601772",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/taxi-data-engineering-project%40taxidatapipeline.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
