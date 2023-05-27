@@ -1,156 +1,119 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2709
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;}
-{\colortbl;\red255\green255\blue255;\red193\green152\blue86;\red16\green16\blue16;\red255\green255\blue255;
-\red125\green141\blue87;\red212\green212\blue212;\red70\green137\blue204;\red76\green72\blue77;\red167\green197\blue152;
-}
-{\*\expandedcolortbl;;\cssrgb\c80392\c65882\c41176;\cssrgb\c7843\c7843\c7843;\cssrgb\c100000\c100000\c100000;
-\cssrgb\c56078\c61569\c41569;\cssrgb\c86275\c86275\c86275;\cssrgb\c33725\c61176\c83922;\cssrgb\c37255\c35294\c37647;\cssrgb\c70980\c80784\c65882;
-}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+import pandas as pd
+import geopandas as gpd
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 import\cf4 \strokec4  pandas \cf2 \strokec2 as\cf4 \strokec4  pd\cf4 \cb1 \strokec4 \
-\cf2 \cb3 \strokec2 import\cf4 \strokec4  geopandas \cf2 \strokec2 as\cf4 \strokec4  gpd\cf4 \cb1 \strokec4 \
-\cf2 \cb3 \strokec2 if\cf4 \strokec4  \cf5 \strokec5 'transformer'\cf4 \strokec4  \cf2 \strokec2 not\cf4 \strokec4  \cf2 \strokec2 in\cf4 \strokec4  \cf2 \strokec2 globals\cf6 \strokec6 ():\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     \cf2 \strokec2 from\cf4 \strokec4  mage_ai.data_preparation.decorators \cf2 \strokec2 import\cf4 \strokec4  transformer\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec2 if\cf4 \strokec4  \cf5 \strokec5 'test'\cf4 \strokec4  \cf2 \strokec2 not\cf4 \strokec4  \cf2 \strokec2 in\cf4 \strokec4  \cf2 \strokec2 globals\cf6 \strokec6 ():\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     \cf2 \strokec2 from\cf4 \strokec4  mage_ai.data_preparation.decorators \cf2 \strokec2 import\cf4 \strokec4  test\cf4 \cb1 \strokec4 \
-\
-\
-\pard\pardeftab720\partightenfactor0
-\cf7 \cb3 \strokec7 @transformer\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec2 def\cf4 \strokec4  transform\cf6 \strokec6 (\cf4 \strokec4 df\cf6 \strokec6 ,\cf4 \strokec4  *args\cf6 \strokec6 ,\cf4 \strokec4  **kwargs\cf6 \strokec6 ):\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     \cf5 \strokec5 """\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3 \strokec5     Template code for a transformer block.\cf4 \cb1 \strokec4 \
-\
-\cf5 \cb3 \strokec5     Add more parameters to this function if this block has multiple parent blocks.\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5     There should be one parameter for each output variable from each parent block.\cf4 \cb1 \strokec4 \
-\
-\cf5 \cb3 \strokec5     Args:\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5         data: The output from the upstream parent block\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5         args: The output from any additional upstream blocks (if applicable)\cf4 \cb1 \strokec4 \
-\
-\cf5 \cb3 \strokec5     Returns:\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5         Anything (e.g. data frame, dictionary, array, int, str, etc.)\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5     """\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     
-\f1\i \cf8 \strokec8 # Specify your transformation logic here
-\f0\i0 \cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     df\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4  = pd.to_datetime\cf6 \strokec6 (\cf4 \strokec4 df\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ])\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     df\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4  = pd.to_datetime\cf6 \strokec6 (\cf4 \strokec4 df\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ])\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     datetime_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ,\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'pick_hour'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.hour\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'pick_day'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.day\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'pick_month'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.month\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'pick_year'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.year\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'pick_weekday'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.weekday\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'drop_hour'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.hour\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'drop_day'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.day\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'drop_month'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.month\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'drop_year'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.year\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'drop_weekday'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ]\cf4 \strokec4 .dt.weekday\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     datetime_dim\cf6 \strokec6 [\cf5 \strokec5 'datetime_id'\cf6 \strokec6 ]\cf4 \strokec4  = datetime_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     datetime_dim = datetime_dim\cf6 \strokec6 [[\cf5 \strokec5 'datetime_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pick_hour'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pick_day'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pick_month'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pick_year'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pick_weekday'\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4                              \cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'drop_hour'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'drop_day'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'drop_month'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'drop_year'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'drop_weekday'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     passenger_count_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'passenger_count'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     passenger_count_dim\cf6 \strokec6 [\cf5 \strokec5 'passenger_count_id'\cf6 \strokec6 ]\cf4 \strokec4  = passenger_count_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     passenger_count_dim = passenger_count_dim\cf6 \strokec6 [[\cf5 \strokec5 'passenger_count_id'\cf6 \strokec6 ,\cf5 \strokec5 'passenger_count'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     trip_distance_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'trip_distance'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     trip_distance_dim\cf6 \strokec6 [\cf5 \strokec5 'trip_distance_id'\cf6 \strokec6 ]\cf4 \strokec4  = trip_distance_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     trip_distance_dim = trip_distance_dim\cf6 \strokec6 [[\cf5 \strokec5 'trip_distance_id'\cf6 \strokec6 ,\cf5 \strokec5 'trip_distance'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     rate_code_type = \cf6 \strokec6 \{\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 1\cf6 \strokec6 :\cf5 \strokec5 "Standard rate"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 2\cf6 \strokec6 :\cf5 \strokec5 "JFK"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 3\cf6 \strokec6 :\cf5 \strokec5 "Newark"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 4\cf6 \strokec6 :\cf5 \strokec5 "Nassau or Westchester"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 5\cf6 \strokec6 :\cf5 \strokec5 "Negotiated fare"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 6\cf6 \strokec6 :\cf5 \strokec5 "Group ride"\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf6 \strokec6 \}\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     rate_code_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'RatecodeID'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     rate_code_dim\cf6 \strokec6 [\cf5 \strokec5 'rate_code_id'\cf6 \strokec6 ]\cf4 \strokec4  = rate_code_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     rate_code_dim\cf6 \strokec6 [\cf5 \strokec5 'rate_code_name'\cf6 \strokec6 ]\cf4 \strokec4  = rate_code_dim\cf6 \strokec6 [\cf5 \strokec5 'RatecodeID'\cf6 \strokec6 ]\cf4 \strokec4 .\cf2 \strokec2 map\cf6 \strokec6 (\cf4 \strokec4 rate_code_type\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     rate_code_dim = rate_code_dim\cf6 \strokec6 [[\cf5 \strokec5 'rate_code_id'\cf6 \strokec6 ,\cf5 \strokec5 'RatecodeID'\cf6 \strokec6 ,\cf5 \strokec5 'rate_code_name'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\
-\
-\cf4 \cb3 \strokec4     pickup_location_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'pickup_longitude'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pickup_latitude'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     pickup_location_dim\cf6 \strokec6 [\cf5 \strokec5 'pickup_location_id'\cf6 \strokec6 ]\cf4 \strokec4  = pickup_location_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     pickup_location_dim = pickup_location_dim\cf6 \strokec6 [[\cf5 \strokec5 'pickup_location_id'\cf6 \strokec6 ,\cf5 \strokec5 'pickup_latitude'\cf6 \strokec6 ,\cf5 \strokec5 'pickup_longitude'\cf6 \strokec6 ]]\cf4 \strokec4  \cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     
-\f1\i \cf8 \strokec8 # geo_pickup = gpd.points_from_xy(pickup_location_dim["pickup_longitude"], pickup_location_dim["pickup_latitude"], crs = "EPSG:4326")
-\f0\i0 \cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     
-\f1\i \cf8 \strokec8 # pickup_location_dim = gpd.GeoDataFrame(pickup_location_dim, geometry=geo_pickup)
-\f0\i0 \cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     dropoff_location_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'dropoff_longitude'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'dropoff_latitude'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     dropoff_location_dim\cf6 \strokec6 [\cf5 \strokec5 'dropoff_location_id'\cf6 \strokec6 ]\cf4 \strokec4  = dropoff_location_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     dropoff_location_dim = dropoff_location_dim\cf6 \strokec6 [[\cf5 \strokec5 'dropoff_location_id'\cf6 \strokec6 ,\cf5 \strokec5 'dropoff_latitude'\cf6 \strokec6 ,\cf5 \strokec5 'dropoff_longitude'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     
-\f1\i \cf8 \strokec8 # geo_dropoff = gpd.points_from_xy(dropoff_location_dim["dropoff_longitude"], dropoff_location_dim["dropoff_latitude"], crs = "EPSG:4326")
-\f0\i0 \cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     
-\f1\i \cf8 \strokec8 # dropoff_location_dim = gpd.GeoDataFrame(dropoff_location_dim, geometry=geo_dropoff)
-\f0\i0 \cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     payment_type_name = \cf6 \strokec6 \{\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 1\cf6 \strokec6 :\cf5 \strokec5 "Credit card"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 2\cf6 \strokec6 :\cf5 \strokec5 "Cash"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 3\cf6 \strokec6 :\cf5 \strokec5 "No charge"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 4\cf6 \strokec6 :\cf5 \strokec5 "Dispute"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 5\cf6 \strokec6 :\cf5 \strokec5 "Unknown"\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4         \cf9 \strokec9 6\cf6 \strokec6 :\cf5 \strokec5 "Voided trip"\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf6 \strokec6 \}\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     payment_type_dim = df\cf6 \strokec6 [[\cf5 \strokec5 'payment_type'\cf6 \strokec6 ]]\cf4 \strokec4 .drop_duplicates\cf6 \strokec6 ()\cf4 \strokec4 .reset_index\cf6 \strokec6 (\cf4 \strokec4 drop=\cf2 \strokec2 True\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     payment_type_dim\cf6 \strokec6 [\cf5 \strokec5 'payment_type_id'\cf6 \strokec6 ]\cf4 \strokec4  = payment_type_dim.index\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     payment_type_dim\cf6 \strokec6 [\cf5 \strokec5 'payment_type_name'\cf6 \strokec6 ]\cf4 \strokec4  = payment_type_dim\cf6 \strokec6 [\cf5 \strokec5 'payment_type'\cf6 \strokec6 ]\cf4 \strokec4 .\cf2 \strokec2 map\cf6 \strokec6 (\cf4 \strokec4 payment_type_name\cf6 \strokec6 )\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     payment_type_dim = payment_type_dim\cf6 \strokec6 [[\cf5 \strokec5 'payment_type_id'\cf6 \strokec6 ,\cf5 \strokec5 'payment_type'\cf6 \strokec6 ,\cf5 \strokec5 'payment_type_name'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     fact_table = df.merge\cf6 \strokec6 (\cf4 \strokec4 passenger_count_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf5 \strokec5 'passenger_count'\cf6 \strokec6 )\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 trip_distance_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf5 \strokec5 'trip_distance'\cf6 \strokec6 )\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 rate_code_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf5 \strokec5 'RatecodeID'\cf6 \strokec6 )\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 pickup_location_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf6 \strokec6 [\cf5 \strokec5 'pickup_longitude'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pickup_latitude'\cf6 \strokec6 ])\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 dropoff_location_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf6 \strokec6 [\cf5 \strokec5 'dropoff_longitude'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'dropoff_latitude'\cf6 \strokec6 ])\cf4 \strokec4 \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 datetime_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf6 \strokec6 [\cf5 \strokec5 'tpep_pickup_datetime'\cf6 \strokec6 ,\cf5 \strokec5 'tpep_dropoff_datetime'\cf6 \strokec6 ])\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              .merge\cf6 \strokec6 (\cf4 \strokec4 payment_type_dim\cf6 \strokec6 ,\cf4 \strokec4  on=\cf5 \strokec5 'payment_type'\cf6 \strokec6 )\cf4 \strokec4  \\\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4              \cf6 \strokec6 [[\cf5 \strokec5 'VendorID'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'datetime_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'passenger_count_id'\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4                \cf5 \strokec5 'trip_distance_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'rate_code_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'store_and_fwd_flag'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'pickup_location_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'dropoff_location_id'\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4                \cf5 \strokec5 'payment_type_id'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'fare_amount'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'extra'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'mta_tax'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'tip_amount'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'tolls_amount'\cf6 \strokec6 ,\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4                \cf5 \strokec5 'improvement_surcharge'\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'total_amount'\cf6 \strokec6 ]]\cf4 \cb1 \strokec4 \
-\
-\cf4 \cb3 \strokec4     \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 \{\cf5 \strokec5 "datetime_dim"\cf6 \strokec6 :\cf4 \strokec4 datetime_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "passenger_count_dim"\cf6 \strokec6 :\cf4 \strokec4 passenger_count_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "trip_distance_dim"\cf6 \strokec6 :\cf4 \strokec4 trip_distance_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "rate_code_dim"\cf6 \strokec6 :\cf4 \strokec4 rate_code_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "pickup_location_dim"\cf6 \strokec6 :\cf4 \strokec4 pickup_location_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "dropoff_location_dim"\cf6 \strokec6 :\cf4 \strokec4 dropoff_location_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "payment_type_dim"\cf6 \strokec6 :\cf4 \strokec4 payment_type_dim.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 ),\cf4 \cb1 \strokec4 \
-\cf4 \cb3 \strokec4     \cf5 \strokec5 "fact_table"\cf6 \strokec6 :\cf4 \strokec4 fact_table.to_dict\cf6 \strokec6 (\cf4 \strokec4 orient=\cf5 \strokec5 "dict"\cf6 \strokec6 )\}\cf4 \cb1 \strokec4 \
-\
-\
-\pard\pardeftab720\partightenfactor0
-\cf7 \cb3 \strokec7 @test\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec2 def\cf4 \strokec4  test_output\cf6 \strokec6 (\cf4 \strokec4 output\cf6 \strokec6 ,\cf4 \strokec4  *args\cf6 \strokec6 )\cf4 \strokec4  -> \cf2 \strokec2 None\cf6 \strokec6 :\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     \cf5 \strokec5 """\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3 \strokec5     Template code for testing the output of the block.\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5     """\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3 \strokec4     \cf2 \strokec2 assert\cf4 \strokec4  output \cf2 \strokec2 is\cf4 \strokec4  \cf2 \strokec2 not\cf4 \strokec4  \cf2 \strokec2 None\cf6 \strokec6 ,\cf4 \strokec4  \cf5 \strokec5 'The output is undefined'\cf4 \cb1 \strokec4 \
-}
+
+@transformer
+def transform(df, *args, **kwargs):
+    """
+    Template code for a transformer block.
+
+    Add more parameters to this function if this block has multiple parent blocks.
+    There should be one parameter for each output variable from each parent block.
+
+    Args:
+        data: The output from the upstream parent block
+        args: The output from any additional upstream blocks (if applicable)
+
+    Returns:
+        Anything (e.g. data frame, dictionary, array, int, str, etc.)
+    """
+    # Specify your transformation logic here
+    df['tpep_pickup_datetime'] = pd.to_datetime(df['tpep_pickup_datetime'])
+    df['tpep_dropoff_datetime'] = pd.to_datetime(df['tpep_dropoff_datetime'])
+
+    datetime_dim = df[['tpep_pickup_datetime','tpep_dropoff_datetime']].drop_duplicates().reset_index(drop=True)
+    datetime_dim['pick_hour'] = datetime_dim['tpep_pickup_datetime'].dt.hour
+    datetime_dim['pick_day'] = datetime_dim['tpep_pickup_datetime'].dt.day
+    datetime_dim['pick_month'] = datetime_dim['tpep_pickup_datetime'].dt.month
+    datetime_dim['pick_year'] = datetime_dim['tpep_pickup_datetime'].dt.year
+    datetime_dim['pick_weekday'] = datetime_dim['tpep_pickup_datetime'].dt.weekday
+
+    datetime_dim['drop_hour'] = datetime_dim['tpep_dropoff_datetime'].dt.hour
+    datetime_dim['drop_day'] = datetime_dim['tpep_dropoff_datetime'].dt.day
+    datetime_dim['drop_month'] = datetime_dim['tpep_dropoff_datetime'].dt.month
+    datetime_dim['drop_year'] = datetime_dim['tpep_dropoff_datetime'].dt.year
+    datetime_dim['drop_weekday'] = datetime_dim['tpep_dropoff_datetime'].dt.weekday
+
+    datetime_dim['datetime_id'] = datetime_dim.index
+    datetime_dim = datetime_dim[['datetime_id', 'tpep_pickup_datetime', 'pick_hour', 'pick_day', 'pick_month', 'pick_year', 'pick_weekday',
+                             'tpep_dropoff_datetime', 'drop_hour', 'drop_day', 'drop_month', 'drop_year', 'drop_weekday']]
+
+    passenger_count_dim = df[['passenger_count']].drop_duplicates().reset_index(drop=True)
+    passenger_count_dim['passenger_count_id'] = passenger_count_dim.index
+    passenger_count_dim = passenger_count_dim[['passenger_count_id','passenger_count']]
+
+    trip_distance_dim = df[['trip_distance']].drop_duplicates().reset_index(drop=True)
+    trip_distance_dim['trip_distance_id'] = trip_distance_dim.index
+    trip_distance_dim = trip_distance_dim[['trip_distance_id','trip_distance']]
+    rate_code_type = {
+        1:"Standard rate",
+        2:"JFK",
+        3:"Newark",
+        4:"Nassau or Westchester",
+        5:"Negotiated fare",
+        6:"Group ride"
+    }
+
+    rate_code_dim = df[['RatecodeID']].drop_duplicates().reset_index(drop=True)
+    rate_code_dim['rate_code_id'] = rate_code_dim.index
+    rate_code_dim['rate_code_name'] = rate_code_dim['RatecodeID'].map(rate_code_type)
+    rate_code_dim = rate_code_dim[['rate_code_id','RatecodeID','rate_code_name']]
+
+
+    pickup_location_dim = df[['pickup_longitude', 'pickup_latitude']].drop_duplicates().reset_index(drop=True)
+    pickup_location_dim['pickup_location_id'] = pickup_location_dim.index
+    pickup_location_dim = pickup_location_dim[['pickup_location_id','pickup_latitude','pickup_longitude']] 
+    # geo_pickup = gpd.points_from_xy(pickup_location_dim["pickup_longitude"], pickup_location_dim["pickup_latitude"], crs = "EPSG:4326")
+    # pickup_location_dim = gpd.GeoDataFrame(pickup_location_dim, geometry=geo_pickup)
+
+    dropoff_location_dim = df[['dropoff_longitude', 'dropoff_latitude']].drop_duplicates().reset_index(drop=True)
+    dropoff_location_dim['dropoff_location_id'] = dropoff_location_dim.index
+    dropoff_location_dim = dropoff_location_dim[['dropoff_location_id','dropoff_latitude','dropoff_longitude']]
+    # geo_dropoff = gpd.points_from_xy(dropoff_location_dim["dropoff_longitude"], dropoff_location_dim["dropoff_latitude"], crs = "EPSG:4326")
+    # dropoff_location_dim = gpd.GeoDataFrame(dropoff_location_dim, geometry=geo_dropoff)
+
+    payment_type_name = {
+        1:"Credit card",
+        2:"Cash",
+        3:"No charge",
+        4:"Dispute",
+        5:"Unknown",
+        6:"Voided trip"
+    }
+    payment_type_dim = df[['payment_type']].drop_duplicates().reset_index(drop=True)
+    payment_type_dim['payment_type_id'] = payment_type_dim.index
+    payment_type_dim['payment_type_name'] = payment_type_dim['payment_type'].map(payment_type_name)
+    payment_type_dim = payment_type_dim[['payment_type_id','payment_type','payment_type_name']]
+
+    fact_table = df.merge(passenger_count_dim, on='passenger_count') \
+             .merge(trip_distance_dim, on='trip_distance') \
+             .merge(rate_code_dim, on='RatecodeID') \
+             .merge(pickup_location_dim, on=['pickup_longitude', 'pickup_latitude']) \
+             .merge(dropoff_location_dim, on=['dropoff_longitude', 'dropoff_latitude'])\
+             .merge(datetime_dim, on=['tpep_pickup_datetime','tpep_dropoff_datetime']) \
+             .merge(payment_type_dim, on='payment_type') \
+             [['VendorID', 'datetime_id', 'passenger_count_id',
+               'trip_distance_id', 'rate_code_id', 'store_and_fwd_flag', 'pickup_location_id', 'dropoff_location_id',
+               'payment_type_id', 'fare_amount', 'extra', 'mta_tax', 'tip_amount', 'tolls_amount',
+               'improvement_surcharge', 'total_amount']]
+
+    return {"datetime_dim":datetime_dim.to_dict(orient="dict"),
+    "passenger_count_dim":passenger_count_dim.to_dict(orient="dict"),
+    "trip_distance_dim":trip_distance_dim.to_dict(orient="dict"),
+    "rate_code_dim":rate_code_dim.to_dict(orient="dict"),
+    "pickup_location_dim":pickup_location_dim.to_dict(orient="dict"),
+    "dropoff_location_dim":dropoff_location_dim.to_dict(orient="dict"),
+    "payment_type_dim":payment_type_dim.to_dict(orient="dict"),
+    "fact_table":fact_table.to_dict(orient="dict")}
+
+
+@test
+def test_output(output, *args) -> None:
+    """
+    Template code for testing the output of the block.
+    """
+    assert output is not None, 'The output is undefined'
