@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The main objective of this project is to understand and implement ETL Extract-Transform-Load process using modren data pipeline tools such as Mage AI, Looker, Google Cloud, Google BigQuery, Python, Google Compute Engine to name a few. Learn different Data models and how to make them easily accessible for Analysis and for machine learning.
+The main objective of this project is to understand and implement ETL Extract-Transform-Load process using modren data pipeline tools such as Mage AI, Looker, Google BigQuery to name a few. Learn different Data models and how to make them easily accessible for Analysis and for machine learning.
 
 ## Architecture
 
@@ -40,6 +40,13 @@ I have used star schema to divide the data.
 - Cloud Storage Buckets
 - BigQuery
 - Looker Studio (Visualing Dashboards)
+
+**Looker Dashboard**
+Here's how the final dashboard looks like
+[Taxi_Dashboard.pdf](https://github.com/BhanuKedhar09/Taxi-Analysis-Data-Engineering/files/11584409/Taxi_Dashboard.pdf)
+
+You can have interactive Dashboard with editing filters [here](https://lookerstudio.google.com/reporting/5fc4ebdf-a7ec-4d6a-a54a-df5e16e98935)
+
 
 **Procedure**
 
