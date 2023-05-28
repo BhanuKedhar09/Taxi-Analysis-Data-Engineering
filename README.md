@@ -41,7 +41,7 @@ I have used star schema to divide the data.
 - BigQuery
 - Looker Studio (Visualing Dashboards)
 
-**Looker Dashboard**
+## Looker Dashboard
 
 Here's how the final dashboard looks like this
 
