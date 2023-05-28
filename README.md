@@ -23,7 +23,8 @@ Link for Data Dictonary :- https://www.nyc.gov/assets/tlc/downloads/pdf/data_dic
 
 I have used star schema to divide the data.
 
-[Taxi Data Model.pdf](https://github.com/BhanuKedhar09/Taxi-Analysis-Data-Engineering/files/11583064/Taxi.Data.Model.pdf)
+![Taxi Data Model1024_1](https://github.com/BhanuKedhar09/Taxi-Analysis-Data-Engineering/assets/112876951/80ec8f02-d025-4874-bbe5-279b2e828ca4)
+
 
 ## Tech Stack
 
