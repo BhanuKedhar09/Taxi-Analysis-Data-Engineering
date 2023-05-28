@@ -50,7 +50,7 @@ Here's how the final dashboard looks like this
 
 You can have interactive Dashboard with filters [here](https://lookerstudio.google.com/reporting/5fc4ebdf-a7ec-4d6a-a54a-df5e16e98935)
 
-
+<!--
 **Procedure**
 
 1. Download the Dataset from either of these links
@@ -62,7 +62,7 @@ You can have interactive Dashboard with filters [here](https://lookerstudio.goog
 5. Upload the dataset to Google Colud Storeage (create google cloud account if you don't have one it is free and gives $300 free credit)
 6. Spin up a new instance in Compute Engine and with machine type *e2-standard-4* and use startupscript.sh in the metadata.
 7. Run mage it would automatically choose port *6789* and access it from from your web browser(make sure you have allowed your IP address in the network firewall).
-
+--!>
 
 
 
