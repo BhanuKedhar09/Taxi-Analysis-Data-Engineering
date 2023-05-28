@@ -42,10 +42,13 @@ I have used star schema to divide the data.
 - Looker Studio (Visualing Dashboards)
 
 **Looker Dashboard**
-Here's how the final dashboard looks like
-[Taxi_Dashboard.pdf](https://github.com/BhanuKedhar09/Taxi-Analysis-Data-Engineering/files/11584409/Taxi_Dashboard.pdf)
 
-You can have interactive Dashboard with editing filters [here](https://lookerstudio.google.com/reporting/5fc4ebdf-a7ec-4d6a-a54a-df5e16e98935)
+Here's how the final dashboard looks like this
+
+![Taxi_Dashboard1024_1](https://github.com/BhanuKedhar09/Taxi-Analysis-Data-Engineering/assets/112876951/7842fe67-d776-457d-ac96-79268855a727)
+
+
+You can have interactive Dashboard with filters [here](https://lookerstudio.google.com/reporting/5fc4ebdf-a7ec-4d6a-a54a-df5e16e98935)
 
 
 **Procedure**
